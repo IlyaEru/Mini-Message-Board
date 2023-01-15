@@ -1,0 +1,17 @@
+<%- include('./partials/header.ejs') %> 
+<main>
+<% if (messages.length === 0) {%>
+    <h1 class="messages-hero"> No messages to display </h1>
+<% } else { %>
+    <h1 class="messages-hero"> Messages </h1>
+    <section class="messages-container">
+        <% messages.forEach(message => { %>
+            <article class="message">
+                <h2 class="message_user"> <%= message.user %> </h2>
+                <p class="message_text">  <%= message.text %> </p>
+            </article>
+        <% }) %>
+    </ul> 
+<% } %> 
+</main>
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,17 @@
+<%- include('./partials/header.ejs') %>
+<main>
+        <h1 class="messages-hero"> New Message </h1>
+
+<form action="/new" method="post" class="new-message-form">
+    <div class="new-message-form__input-container">
+        <label for="user">User</label>
+        <input type="text" name="user" id="user" required>
+    </div>
+    <div class="new-message-form__input-container">
+        <label for="text">Message</label>
+        <textarea name="text" id="text" cols="30" rows="10" required></textarea>
+    </div>
+    <button type="submit">Send</button>
+</form>
+</main>
+<%- include('./partials/footer.ejs') %>
